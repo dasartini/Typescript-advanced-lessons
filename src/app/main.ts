@@ -5,7 +5,6 @@ import { Category } from "./categories/categories.model";
 
 for (let index = 0; index < 50; index++) {
   addProduct({
-    id: faker.string.uuid(),
     description: faker.commerce.productDescription(),
     image: faker.image.url(),
     color: faker.color.human(),
@@ -14,16 +13,9 @@ for (let index = 0; index < 50; index++) {
     tags: [faker.lorem.word(), faker.lorem.word(), faker.lorem.word()],
     size: faker.helpers.arrayElement(['S', 'L', 'M', 'XL']),
     title: faker.commerce.productName(),
-    createdAt: faker.date.recent(),
-    updatedAt: faker.date.recent(),
     stock: faker.datatype.number({ min: 10, max: 100 }),
 
-    category: {
-      id: faker.string.uuid(),
-      name: faker.commerce.department(),
-      createdAt: faker.date.recent(),
-      updatedAt: faker.date.recent(),
-    },
+   categoryId: faker.string.uuid()
   });
 }
 
