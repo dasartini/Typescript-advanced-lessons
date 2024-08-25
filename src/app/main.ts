@@ -1,5 +1,5 @@
 import {faker} from '@faker-js/faker';
-import { addProduct, products } from "./products/product.service";
+import { addProduct, products, updateProduct } from "./products/product.service";
 import { Category } from "./categories/categories.model";
 
 
@@ -21,3 +21,10 @@ for (let index = 0; index < 50; index++) {
 
 
 console.log(products)
+const exampleProduct= products[0]
+updateProduct(exampleProduct.id,{
+title: "New title",
+stock:90,
+
+
+})
