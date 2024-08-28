@@ -1,6 +1,6 @@
 import { faker } from "@faker-js/faker"
 import { Product } from "./product.model"
-import { CreateProductDto, UpdateProductDto } from "./product.dto"
+import { CreateProductDto, FindProductDto, UpdateProductDto } from "./product.dto"
 
 export const products : Product[] = []
 
@@ -35,6 +35,6 @@ products[index]={
 return products[index]
 }
 
-export const findProducts = (dto: Product): Product[] =>{
+export const findProducts = (dto: FindProductDto): Product[] =>{
 return products
 }

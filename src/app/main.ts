@@ -1,5 +1,5 @@
 import {faker} from '@faker-js/faker';
-import { addProduct, products, updateProduct } from "./products/product.service";
+import { addProduct, products, updateProduct, findProducts, } from "./products/product.service";
 import { Category } from "./categories/categories.model";
 
 
@@ -28,3 +28,4 @@ stock:90,
 
 
 })
+
